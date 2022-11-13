@@ -2,4 +2,13 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    pass
+    SQLALCHEMY_DATABASE_URL: str
+    
+    class Config:
+        env_file = ".env"
+
+settings = Settings()
+
+
+SQLALCHEMY_DATABASE_URL = settings.SQLALCHEMY_DATABASE_URL
+
