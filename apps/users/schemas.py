@@ -8,3 +8,9 @@ class UserRegistration(BaseModel):
     class Config:
         orm_mode = True
 
+class UserGet(BaseModel):
+    id: int
+    username: str
+
+    class Config:
+        orm_mode = True

@@ -1,11 +1,12 @@
+from typing import List
 from fastapi import APIRouter, Depends
 
 from sqlalchemy.orm import Session
 
 from core.database import get_db
 
-from apps.users.schemas import UserRegistration
-from apps.users.crud import create_user
+from apps.users.schemas import UserGet, UserRegistration
+from apps.users.crud import create_user, get_user
 
 router = APIRouter()
 
